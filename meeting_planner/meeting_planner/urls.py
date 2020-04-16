@@ -18,10 +18,12 @@ from django.urls import path
 
 # Import the views from the website app, that is, the website pages.
 from website.views import welcome, date, about
+from meetings.views import detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('welcome', welcome),
     path('date', date),
     path('about', about),
+    path('meetings/<int:id>', detail),
 ]
