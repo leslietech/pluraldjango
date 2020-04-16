@@ -6,15 +6,21 @@
 <body>
     <h1>Welcome to the Meeting Planner</h1>
     <p>
-        This is the demo application for the course
+        This is the <em>demo</em> application for the course
         <em>Django: Getting Started</em>
         on <a href="https://www.pluralsight.com" target="_blank">
-    Pluralsight</a>
+    Pluralsight</a>.
     </p>
-    <p>
-        <!-- The dictionary containing the value for this placeholder is in the
-        page view  -->
-        There are currently <em>{{ num_meetings }}</em> meetings in the database.
-    </p>
+
+   <h2>Meetings</h2>
+   <ul>
+       {% for meeting in meetings %}
+       <li>
+           <!-- <a href="/meetings/{{meeting.id}}">{{ meeting.title }}</a> -->
+           <a href="{% url 'detail' meeting.id %}">{{ meeting.title }}</a>
+       </li>
+       {% endfor %}
+   </ul>
+   <a href="{% url 'rooms' %}">Rooms List</a>
 </body>
 </html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Meeting Rooms Listing</title>
+</head>
+<body>
+    <h2>Meeting Rooms List</h2>
+<ul>
+    {% for room in rooms %}
+    <li>
+        {{room.name}} - Room {{room.room_number}} - Floor {{room.floor}}
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'welcome' %}">Home</a>
+</body>
+</html>
