@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-# Import the views from the website app, that is, the website pages.
+# Import the views from the website app, that is, the wlsebsite pages.
 from website.views import welcome, date, about
 # from meetings.views import detail, rooms
 

@@ -1,9 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 <title>Welcome to the Meeting Planner!</title>
+<link rel="stylesheet" href="{% static 'website/style.css' %}">
 </head>
 <body>
+    <img src="{% static 'website/techdesk.jpg' %}" width="500px">
     <h1>Welcome to the Meeting Planner</h1>
     <p>
         This is the <em>demo</em> application for the course
@@ -11,6 +14,8 @@
         on <a href="https://www.pluralsight.com" target="_blank">
     Pluralsight</a>.
     </p>
+
+    <img src="{% static 'website/calendar.png' %}" width="100px">
 
    <h2>Meetings</h2>
    <ul>
